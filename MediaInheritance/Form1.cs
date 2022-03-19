@@ -50,7 +50,27 @@ namespace MediaInheritance
 
         private void submit_media_clicked(object sender, EventArgs e)
         {
+            bool parse_success = false;
+            string name = "";
+            int length = 0;
+            string creator = "";
+            string publisher = "";
+            string release_year = "";
+            string multiplayer = "";
+            string genre = "";
 
+            switch (cb_type_submit.SelectedIndex)
+            {
+                case 0:
+
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
