@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.input_title = new System.Windows.Forms.TextBox();
             this.input_creator = new System.Windows.Forms.TextBox();
             this.input_length_or_multiplayer = new System.Windows.Forms.TextBox();
@@ -167,7 +168,7 @@
             this.cb_type_submit.Name = "cb_type_submit";
             this.cb_type_submit.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cb_type_submit.Size = new System.Drawing.Size(100, 21);
-            this.cb_type_submit.TabIndex = 12;
+            this.cb_type_submit.TabIndex = 13;
             this.cb_type_submit.SelectedIndexChanged += new System.EventHandler(this.cb_type_submit_SelectedIndexChanged);
             // 
             // submit_clicked
@@ -176,7 +177,7 @@
             this.submit_clicked.Location = new System.Drawing.Point(83, 246);
             this.submit_clicked.Name = "submit_clicked";
             this.submit_clicked.Size = new System.Drawing.Size(100, 37);
-            this.submit_clicked.TabIndex = 13;
+            this.submit_clicked.TabIndex = 12;
             this.submit_clicked.Text = "Submit";
             this.submit_clicked.UseVisualStyleBackColor = true;
             this.submit_clicked.Click += new System.EventHandler(this.submit_media_clicked);
@@ -186,8 +187,11 @@
             this.box_view_selected_lists.Location = new System.Drawing.Point(252, 72);
             this.box_view_selected_lists.Multiline = true;
             this.box_view_selected_lists.Name = "box_view_selected_lists";
+            this.box_view_selected_lists.ReadOnly = true;
+            this.box_view_selected_lists.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.box_view_selected_lists.Size = new System.Drawing.Size(202, 211);
             this.box_view_selected_lists.TabIndex = 14;
+            this.box_view_selected_lists.TabStop = false;
             // 
             // cb_list_view
             // 
@@ -225,7 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 350);
+            this.ClientSize = new System.Drawing.Size(488, 321);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.cb_list_view);
@@ -244,9 +248,13 @@
             this.Controls.Add(this.input_length_or_multiplayer);
             this.Controls.Add(this.input_creator);
             this.Controls.Add(this.input_title);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(504, 360);
+            this.MinimumSize = new System.Drawing.Size(504, 360);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Media Archive";
             this.ResumeLayout(false);
             this.PerformLayout();
 

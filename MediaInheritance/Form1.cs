@@ -31,6 +31,7 @@ namespace MediaInheritance
                     label_length_or_multiplayer.Text = "No. of pages";
                     label_publisher.Text = "Publisher";
                     label_creator.Text = "Author";
+                    input_genre.Clear();
                     label_genre.Enabled = false;
                     input_genre.Enabled = false;
                     break;
@@ -38,6 +39,7 @@ namespace MediaInheritance
                     label_length_or_multiplayer.Text = "Runtime";
                     label_creator.Text = "Director";
                     label_publisher.Text = "Studio";
+                    input_genre.Clear();
                     label_genre.Enabled = false;
                     input_genre.Enabled = false;
                     break;
