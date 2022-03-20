@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace MediaInheritance
 {
+    
+
     internal abstract class Media
     {
         protected string title;
@@ -24,16 +26,14 @@ namespace MediaInheritance
             this.length = length;
             this.studio = studio;
         }
+
+        string newLine = Environment.NewLine;
         private string studio;
         protected int length;
 
         public override string ToString()
         {
-            return String.Format("Name: {0}\n" +
-                "Release year: {1}\n" +
-                "Director: {2}\n" +
-                "Runtime: {3}\n" +
-                "Studio: {4}\n", title, release_year, creator, length, studio);
+            return String.Format($"Name: {title}{newLine}Release year: {release_year}{newLine}Director: {creator}{newLine}Runtime: {length}{newLine}Studio: {studio}{newLine}{newLine}");
         }
     }
 
@@ -48,16 +48,13 @@ namespace MediaInheritance
             this.publisher = publisher;
         }
 
+        string newLine = Environment.NewLine;
         private string publisher;
         protected int length;
 
         public override string ToString()
         {
-            return String.Format("Name: {0}\n" +
-                "Release year: {1}\n" +
-                "Author: {2}\n" +
-                "Number of pages: {3}\n" +
-                "Publisher: {4}\n", title, release_year, creator, length, publisher);
+            return String.Format($"Name: {title}{newLine}Release year: {release_year}{newLine}Author: {creator}{newLine}Number of pages: {length}{newLine}Publisher: {publisher}{newLine}{newLine}");
         }
     }
 
@@ -72,17 +69,14 @@ namespace MediaInheritance
             this.multiplayer = multiplayer;
             this.publisher = publisher;
         }
+
+        string newLine = Environment.NewLine;
         private bool multiplayer;
         private string publisher;
         string genre;
         public override string ToString()
         {
-            return String.Format("Name: {0}\n" +
-                "Genre: {1}" +
-                "Release year: {2}\n" +
-                "Multiplayer: {3}\n" +
-                "Studio: {4}\n" +
-                "Publisher: {5}\n", title, genre, release_year, multiplayer, creator, publisher);
+            return String.Format($"Name: {title}{newLine}Genre: {genre}{newLine}Release year: {release_year}{newLine}Multiplayer: {multiplayer}{newLine}Studio: {creator}{newLine}Publisher: {publisher}{newLine}{newLine}");
         }
     }
 }
