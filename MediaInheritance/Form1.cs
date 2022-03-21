@@ -71,7 +71,7 @@ namespace MediaInheritance
                     while (!parse_success)
                     {
 
-                        if (int.TryParse(input_length_or_multiplayer.Text, out length))
+                        if (int.TryParse(input_length_or_multiplayer.Text, out length) && length > 0)
                         {
                             name = input_title.Text;
                             release_year = input_releaseyear.Text;
